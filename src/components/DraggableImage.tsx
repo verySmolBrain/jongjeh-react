@@ -12,7 +12,9 @@ function DraggableImage({ imageUrl, x, y } : { imageUrl: string, x: number, y: n
                     background: `url(${imageUrl})`,
                     backgroundSize: 'contain',
                     backgroundRepeat: 'no-repeat',
-                    position: 'absolute'
+                    position: 'absolute',
+                    border: '1px solid #000',
+                    backgroundColor: '#fff',
                 }}
                 lockAspectRatio = { true }
             >
