@@ -6,11 +6,21 @@ import { Box, ChakraProvider, Container, Text } from '@chakra-ui/react'
 import DraggableImage from './components/DraggableImage'
 import { TypeAnimation } from 'react-type-animation';
 
-import image1 from './assets/1.png'
-import image2 from './assets/2.png'
-import image3 from './assets/3.png'
-import image4 from './assets/4.png'
-import image5 from './assets/5.png'
+import image1 from './assets/1.jpg'
+import image2 from './assets/2.jpg'
+import image3 from './assets/3.jpg'
+import image4 from './assets/4.jpg'
+import image5 from './assets/5.jpg'
+import image6 from './assets/6.jpg'
+import image7 from './assets/7.jpg'
+import image8 from './assets/8.jpg'
+import image9 from './assets/9.jpg'
+import image10 from './assets/10.jpg'
+import image11 from './assets/11.jpg'
+import image12 from './assets/12.jpg'
+import image13 from './assets/13.jpg'
+import image14 from './assets/14.jpg'
+import image15 from './assets/15.jpg'
 
 function App() {
     let min_left = -250;
@@ -66,11 +76,21 @@ function App() {
             <Text> Click 'To Image' to access Image </Text>
             <Text> THE IMAGES ARE DRAGGABLE AND RESIZEABLE </Text>
 
-            <DraggableImage imageUrl = { image1 } x = { left() } y = { top() } />
-            <DraggableImage imageUrl = { image2 } x = { left() } y = { top() }  />
-            <DraggableImage imageUrl = { image3 } x = { left() } y = { top() }  />
-            <DraggableImage imageUrl = { image4 } x = { left() } y = { top() }  />
-            <DraggableImage imageUrl = { image5 } x = { left() } y = { top() }  />
+            <DraggableImage imageUrl = { image1 } x = { left() } y = { top() } width = { 350 } height = { 494 } />
+            <DraggableImage imageUrl = { image2 } x = { left() } y = { top() }  width = { 350 } height = { 494 } />
+            <DraggableImage imageUrl = { image3 } x = { left() } y = { top() }  width = { 494 } height = { 350 } />
+            <DraggableImage imageUrl = { image4 } x = { left() } y = { top() }  width = { 350 } height = { 494 } />
+            <DraggableImage imageUrl = { image5 } x = { left() } y = { top() }  width = { 372 } height = { 350 } />
+            <DraggableImage imageUrl = { image6 } x = { left() } y = { top() } width = { 494 } height = { 350 } />
+            <DraggableImage imageUrl = { image7 } x = { left() } y = { top() }  width = { 350 } height = { 494 } />
+            <DraggableImage imageUrl = { image8 } x = { left() } y = { top() }  width = { 350 } height = { 420 } />
+            <DraggableImage imageUrl = { image9 } x = { left() } y = { top() }  width = { 494 } height = { 350 } />
+            <DraggableImage imageUrl = { image10 } x = { left() } y = { top() }  width = { 350 } height = { 494 } />
+            <DraggableImage imageUrl = { image11 } x = { left() } y = { top() } width = { 350 } height = { 494 } />
+            <DraggableImage imageUrl = { image12 } x = { left() } y = { top() }  width = { 350 } height = { 494 } />
+            <DraggableImage imageUrl = { image13 } x = { left() } y = { top() }  width = { 350 } height = { 494 } />
+            <DraggableImage imageUrl = { image14 } x = { left() } y = { top() }  width = { 350 } height = { 494 } />
+            <DraggableImage imageUrl = { image15 } x = { left() } y = { top() }  width = { 350 } height = { 494 } />
         </ChakraProvider>
     )
 }

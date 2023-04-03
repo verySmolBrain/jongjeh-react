@@ -3,14 +3,14 @@ import { Resizable } from 're-resizable'
 import Draggable from 'react-draggable'
 import { LinkBox, LinkOverlay, Image, Link } from '@chakra-ui/react'
 
-function DraggableImage({ imageUrl, x, y } : { imageUrl: string, x: number, y: number }) {
+function DraggableImage({ imageUrl, x, y, width, height } : { imageUrl: string, x: number, y: number, width: number, height: number }) {
 
     return (
         <LinkBox>
             <LinkOverlay>
                 <Draggable defaultPosition = {{ x: x, y: y }}>
                     <Resizable 
-                        defaultSize={{ width: 500, height: 349 }}
+                        defaultSize={{ width: width, height: height }}
                         style = {{
                             background: `url(${imageUrl})`,
                             backgroundSize: 'contain',
