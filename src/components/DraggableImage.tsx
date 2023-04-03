@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { Resizable } from 're-resizable'
 import Draggable from 'react-draggable'
-import { LinkBox, LinkOverlay, Image } from '@chakra-ui/react'
+import { LinkBox, LinkOverlay, Image, Link } from '@chakra-ui/react'
 
 function DraggableImage({ imageUrl, x, y } : { imageUrl: string, x: number, y: number }) {
 
@@ -12,6 +12,7 @@ function DraggableImage({ imageUrl, x, y } : { imageUrl: string, x: number, y: n
                     <Resizable 
                         defaultSize={{ width: 500, height: 500 }}
                         style = {{
+                            background: `url(${imageUrl})`,
                             backgroundSize: 'contain',
                             backgroundRepeat: 'no-repeat',
                             position: 'static',
@@ -20,7 +21,9 @@ function DraggableImage({ imageUrl, x, y } : { imageUrl: string, x: number, y: n
                         }}
                         lockAspectRatio = { true }
                     >
-                        <Image src = { imageUrl } style = {{ border: '1px solid #000' }} />
+                    <Link href = { imageUrl } target = "_blank" rel = "noopener noreferrer" >
+                        To Image
+                    </Link>
                     </Resizable>
                 </Draggable>
             </LinkOverlay>

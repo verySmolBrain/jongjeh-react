@@ -63,7 +63,7 @@ function App() {
 
 
             <Text> PLEASE ZOOM OUT IF YOU WANT A BETTER VIEW </Text>
-            <Text> RIGHT CLICK IMAGE AND SAVE IMAGE FOR BETTER VIEW </Text>
+            <Text> Click 'To Image' to access Image </Text>
             <Text> THE IMAGES ARE DRAGGABLE AND RESIZEABLE </Text>
 
             <DraggableImage imageUrl = { image1 } x = { left() } y = { top() } />
