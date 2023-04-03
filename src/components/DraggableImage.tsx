@@ -10,7 +10,7 @@ function DraggableImage({ imageUrl, x, y, width, height } : { imageUrl: string, 
             <LinkOverlay>
                 <Draggable defaultPosition = {{ x: x, y: y }}>
                     <Resizable 
-                        defaultSize={{ width: width, height: height }}
+                        defaultSize={{ width: width * 2, height: height * 2 }}
                         style = {{
                             background: `url(${imageUrl})`,
                             backgroundSize: 'contain',
