@@ -29,7 +29,7 @@ function App() {
 
     return (
         <ChakraProvider>
-            <Container w = '100%' color='orange'>
+            <Container w = '100%' color='green'>
                 <TypeAnimation
                     sequence={[
                         // Same String at the start will only be typed once, initially
