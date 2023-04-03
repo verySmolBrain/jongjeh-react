@@ -1,9 +1,7 @@
 import { useState } from 'react'
-
-import viteLogo from '/vite.svg'
 import './App.css'
 
-import { ChakraProvider, Text } from '@chakra-ui/react'
+import { Box, ChakraProvider, Container, Text } from '@chakra-ui/react'
 
 import DraggableImage from './components/DraggableImage'
 import { TypeAnimation } from 'react-type-animation';
@@ -31,32 +29,38 @@ function App() {
 
     return (
         <ChakraProvider>
-            <TypeAnimation
-                sequence={[
-                    // Same String at the start will only be typed once, initially
-                    'Gizturd',
-                    1000,
-                    'Jongjeh',
-                    1000,
-                    'Gumjongjeh',
-                    1000,
-                    'Kimchi',
-                    1000,
-                    'Kimchi Fried Rice',
-                    1000,
-                    'Kimchi Pancakes',
-                    1000,
-                    'Cabbage',
-                    1000,
-                    'Cabbage Kimchi',
-                    1000,
-                    'Bibimbap',
-                    1000
-                ]}
-                speed={50}
-                style={{ fontSize: '5em' }}
-                repeat={Infinity}
-            />
+            <Container w = '100%' color='orange'>
+                <TypeAnimation
+                    sequence={[
+                        // Same String at the start will only be typed once, initially
+                        'Gizturd',
+                        1000,
+                        'Jongjeh',
+                        1000,
+                        'Gumjongjeh',
+                        1000,
+                        'Kimchi',
+                        1000,
+                        'Kimchi ඞ',
+                        1000,
+                        'Kimchi Fried Rice',
+                        1000,
+                        'Kimchi Pancakes',
+                        1000,
+                        'Cabbage',
+                        1000,
+                        'Cabbage Kimchi',
+                        1000,
+                        'Bibimbap',
+                        1000
+                    ]}
+                    speed={50}
+                    style={{ fontSize: '3em' }}
+                    repeat={Infinity}
+                />
+            </Container>
+
+
 
             <Text> PLEASE ZOOM OUT IF YOU WANT A BETTER VIEW </Text>
             <Text> RIGHT CLICK IMAGE AND SAVE IMAGE FOR BETTER VIEW </Text>
