@@ -17,7 +17,7 @@ const theme = createTheme({
 function App() {
     const jongjeh_pics = import.meta.glob('./assets/jongjeh_images/*.jpg', { as: "url", eager: true })
     const image_data = Object.keys(jongjeh_pics).map((url) => {
-        const title = url.split('/').pop()?.split('.')[0]
+        const title = url.split('/').pop()?.split('.').pop()
         return {
             img: jongjeh_pics[url],
             title: title
