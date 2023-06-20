@@ -15,15 +15,14 @@ const theme = createTheme({
   });
 
 function App() {
-    const jongjeh_pics = import.meta.glob('./assets/jongjeh_images/*.jpg')
-    const image_data = Object.keys(jongjeh_pics).map(
-        (path) => {
-            return {
-                img: new URL(path, import.meta.url).href,
-                title: path.split('/').pop()?.split('.')[0],
-            }
+    const jongjeh_pics = import.meta.glob('./assets/jongjeh_images/*.jpg', { as: "url", eager: true })
+    const image_data = Object.keys(jongjeh_pics).map((url) => {
+        const title = url.split('/').pop()?.split('.')[0]
+        return {
+            img: jongjeh_pics[url],
+            title: title
         }
-    )
+    })
 
     return (
         <ThemeProvider theme = {theme}>
