@@ -7,6 +7,7 @@ import createTheme from '@mui/material/styles/createTheme';
 import red from '@mui/material/colors/red';
 import IntroductionHeader from './components/IntroductionHeader';
 import { responsiveFontSizes } from '@mui/material';
+import ImageGalleryFooter from './components/ImageGalleryFooter';
 
 let theme = createTheme({
     palette: {
@@ -26,8 +27,8 @@ let theme = createTheme({
             '"Apple Color Emoji"',
             '"Segoe UI Emoji"',
             '"Segoe UI Symbol"',
-            '"Indie Flower", cursive;',
-            '"Public Sans", sans-serif;',
+            '"Indie Flower", cursive',
+            '"Public Sans", sans-serif',
         ].join(','),
     },
 });
@@ -47,6 +48,7 @@ function App() {
         <ThemeProvider theme = {theme}>
             <IntroductionHeader />
             <ImageGallery itemData = { image_data }/>
+            <ImageGalleryFooter />
         </ThemeProvider>
     )
 }
