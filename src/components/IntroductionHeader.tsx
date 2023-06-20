@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Avatar, Box, Grid, ImageList, ImageListItem, Stack, Typography } from '@mui/material';
+import { Avatar, Box, Grid, ImageList, ImageListItem, Stack, Typography, useMediaQuery, useTheme } from '@mui/material';
 import { Key } from 'react';
 
 import jongjeh from '/jongjeh.webp'
@@ -7,6 +7,9 @@ import jongjeh from '/jongjeh.webp'
 // avatar has width and height max(width, height)
 
 function IntroductionHeader() {
+    const theme = useTheme();
+    const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+
     return (
         <Grid 
             container
@@ -15,7 +18,11 @@ function IntroductionHeader() {
         >
             <Grid xs = {4} display = "flex" justifyContent = "flex-end">
                 <a href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-                    <Avatar sx = {{ width: '10vw', height: '10vw' }} src = "/jongjeh.webp">
+                    <Avatar sx = {{ 
+                            width: isSmallScreen ? '15vw' : '10vw', 
+                            height: isSmallScreen ? '15vw' : '10vw', 
+                        }} src = "/jongjeh.webp"
+                    >
                         Jongjeh
                     </Avatar>
                 </a>
