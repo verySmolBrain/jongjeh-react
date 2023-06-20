@@ -16,14 +16,14 @@ const theme = createTheme({
 
 function App() {
     const jongjeh_pics = import.meta.glob('./assets/jongjeh_images/*.jpg')
-    const image_data = Object.keys(jongjeh_pics).map((path) => {
-        return {
-            img: new URL(path, import.meta.url).pathname,
-            title: path.split('/').pop()?.split('.')[0],
+    const image_data = Object.keys(jongjeh_pics).map(
+        (path) => {
+            return {
+                img: new URL(path, import.meta.url).pathname,
+                title: path.split('/').pop()?.split('.')[0],
+            }
         }
-    })
-
-    console.log(jongjeh_pics)
+    )
 
     return (
         <ThemeProvider theme = {theme}>
