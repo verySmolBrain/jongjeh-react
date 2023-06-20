@@ -19,7 +19,7 @@ function App() {
     const image_data = Object.keys(jongjeh_pics).map(
         (path) => {
             return {
-                img: new URL(path, import.meta.url).pathname,
+                img: new URL(path, import.meta.url).href,
                 title: path.split('/').pop()?.split('.')[0],
             }
         }
