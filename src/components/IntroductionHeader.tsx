@@ -22,7 +22,7 @@ function IntroductionHeader() {
             </Grid>
 
             <Grid xs = {4}>
-                <Typography variant = "h1" align = "center" fontFamily = {"https://fonts.googleapis.com/css?family=Sofia"}>
+                <Typography variant = "h1" align = "center" fontFamily = {'"Indie Flower", cursive'}>
                     Jongjeh
                 </Typography>
             </Grid>
