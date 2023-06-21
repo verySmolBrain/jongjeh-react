@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { ImageList, ImageListItem } from '@mui/material';
+import { ImageList, ImageListItem, useMediaQuery, useTheme } from '@mui/material';
 import { Key } from 'react';
 
 import image1 from '../assets/jongjeh_images/1.jpg'
@@ -10,8 +10,11 @@ interface ImageGalleryProps {
 }
 
 function ImageGallery( { itemData }: { itemData: ImageGalleryProps[] } ) {
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+
     return (
-        <ImageList variant = "masonry" cols = {3} gap = {8}>
+        <ImageList variant = "masonry" cols = {isMobile ? 2 : 3} gap = {8}>
             {
                 itemData.map((item: { img: string; title: string | undefined; }) => (
                     <ImageListItem key = {item.img}>
