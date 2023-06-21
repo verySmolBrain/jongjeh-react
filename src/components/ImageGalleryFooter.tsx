@@ -24,7 +24,7 @@ function Footer() {
             right = { isDesktop ? 0 : 'auto' }
         >
             <IconButton href = "https://www.instagram.com/jongjeh/">
-                <InstagramIcon></InstagramIcon>
+                <InstagramIcon fontSize = "large"></InstagramIcon>
             </IconButton>
         </Box>
     );
