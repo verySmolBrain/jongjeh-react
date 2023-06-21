@@ -2,8 +2,6 @@ import PropTypes from 'prop-types';
 import { ImageList, ImageListItem, useMediaQuery, useTheme } from '@mui/material';
 import { Key } from 'react';
 
-import image1 from '../assets/jongjeh_images/1.jpg'
-
 interface ImageGalleryProps {
     img: string;
     title: string | undefined;

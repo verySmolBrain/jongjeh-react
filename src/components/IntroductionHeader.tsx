@@ -4,8 +4,6 @@ import { Key } from 'react';
 
 import jongjeh from '/jongjeh.webp'
 
-// avatar has width and height max(width, height)
-
 function IntroductionHeader() {
     const theme = useTheme();
     const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
@@ -21,7 +19,7 @@ function IntroductionHeader() {
                     <Avatar sx = {{ 
                             width: isSmallScreen ? '15vw' : '10vw', 
                             height: isSmallScreen ? '15vw' : '10vw', 
-                        }} src = "/jongjeh.webp"
+                        }} src = "/jongjeh.png"
                     >
                         Jongjeh
                     </Avatar>

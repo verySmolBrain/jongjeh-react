@@ -23,28 +23,8 @@ function Footer() {
             left = { isDesktop ? 0 : 'auto' }
             right = { isDesktop ? 0 : 'auto' }
         >
-            <IconButton href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+            <IconButton href = "https://www.instagram.com/jongjeh/">
                 <InstagramIcon></InstagramIcon>
-            </IconButton>
-
-            <IconButton href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-                <FacebookIcon></FacebookIcon>
-            </IconButton>
-
-            <IconButton href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-                <TwitterIcon></TwitterIcon>
-            </IconButton>
-
-            <IconButton href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-                <YouTubeIcon></YouTubeIcon>
-            </IconButton>
-
-            <IconButton href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-                <EmailIcon></EmailIcon>
-            </IconButton>
-
-            <IconButton href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-                <LinkedInIcon></LinkedInIcon>
             </IconButton>
         </Box>
     );
