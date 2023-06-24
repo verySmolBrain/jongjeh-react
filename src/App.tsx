@@ -33,13 +33,13 @@ function App() {
             <IntroductionHeader />
             <List>
                 <ListItem>
-                    <ImageGallery itemData = { generate_images(wide_images) } is_wide = { true }/>
+                    <ImageGallery images = { generate_images(wide_images) } is_wide = { true }/>
                 </ListItem>
 
                 <Divider variant = "inset" component = "li" sx = {{ borderBottomWidth: 3, bgcolor: 'black' }}/>
 
                 <ListItem>
-                    <ImageGallery itemData = { generate_images(tall_images) } is_wide = { false }/>
+                    <ImageGallery images = { generate_images(tall_images) } is_wide = { false }/>
                 </ListItem>
             </List>
             <ImageGalleryFooter />
