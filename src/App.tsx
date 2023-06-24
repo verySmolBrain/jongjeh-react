@@ -35,8 +35,8 @@ function App() {
                 <ListItem>
                     <ImageGallery images = { generate_images(wide_images) } is_wide = { true }/>
                 </ListItem>
-
-                <Divider variant = "inset" component = "li" sx = {{ borderBottomWidth: 3, bgcolor: 'black' }}/>
+            
+                <Divider sx = {{ borderBottomWidth: 3, bgcolor: 'black' }}/>
 
                 <ListItem>
                     <ImageGallery images = { generate_images(tall_images) } is_wide = { false }/>

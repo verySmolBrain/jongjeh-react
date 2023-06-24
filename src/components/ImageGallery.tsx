@@ -45,7 +45,7 @@ function ImageGallery( { images, is_wide }: ImageGalleryParams ) {
                 ))
             }
             <Dialog open = { open } onClose = { handleClose } onClick = { handleClose }>
-                <img src = {`${selectedImage}?w=248&fit=crop&auto=format`} alt = "" style = {{ width: '100%' }}/>
+                <img src = {`${selectedImage}?w=800&fit=crop&auto=format`} alt = ""/>
             </Dialog>
         </ImageList>
     )
