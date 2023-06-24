@@ -1,16 +1,10 @@
-import { useEffect, useState } from 'react'
 import './App.css'
 
-import ImageGallery from './components/TallImageGallery'
+import ImageGallery from './components/ImageGallery'
 import ThemeProvider from '@mui/material/styles/ThemeProvider'
-import createTheme from '@mui/material/styles/createTheme';
-import red from '@mui/material/colors/red';
 import IntroductionHeader from './components/IntroductionHeader';
 import { Divider, LinearProgress, List, ListItem, responsiveFontSizes } from '@mui/material';
 import ImageGalleryFooter from './components/ImageGalleryFooter';
-import ImageGalleryDynamic from './components/ImageGalleryDynamic';
-import TallImageGallery from './components/TallImageGallery';
-import WideImageGallery from './components/WideImageGallery';
 import theme from './theme/theme';
 
 type Photo = {
@@ -39,13 +33,13 @@ function App() {
             <IntroductionHeader />
             <List>
                 <ListItem>
-                    <WideImageGallery itemData = { generate_images(wide_images) }/>
+                    <ImageGallery itemData = { generate_images(wide_images) } is_wide = { true }/>
                 </ListItem>
 
                 <Divider variant = "inset" component = "li" sx = {{ borderBottomWidth: 3, bgcolor: 'black' }}/>
 
                 <ListItem>
-                    <TallImageGallery itemData = { generate_images(tall_images) }/>
+                    <ImageGallery itemData = { generate_images(tall_images) } is_wide = { false }/>
                 </ListItem>
             </List>
             <ImageGalleryFooter />

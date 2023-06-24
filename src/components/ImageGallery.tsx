@@ -5,12 +5,19 @@ interface ImageGalleryProps {
     title: string | undefined;
 }
 
-function WideImageGallery( { itemData }: { itemData: ImageGalleryProps[] } ) {
+interface ImageGalleryParams {
+    itemData: ImageGalleryProps[];
+    is_wide: boolean;
+}
+
+function ImageGallery( { itemData, is_wide }: ImageGalleryParams ) {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
+    const base_columns = is_wide ? 1 : 2;
+
     return (
-        <ImageList variant = "masonry" cols = {isMobile ? 1 : 2} gap = {8}>
+        <ImageList variant = "masonry" cols = {isMobile ? base_columns : base_columns + 1} gap = {8}>
             {
                 itemData.map((item: { src: string; title: string | undefined; }) => (
                     <ImageListItem key = {item.src}>
@@ -27,4 +34,4 @@ function WideImageGallery( { itemData }: { itemData: ImageGalleryProps[] } ) {
     )
 }
 
-export default WideImageGallery;
+export default ImageGallery;
