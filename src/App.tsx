@@ -6,7 +6,7 @@ import ThemeProvider from '@mui/material/styles/ThemeProvider'
 import createTheme from '@mui/material/styles/createTheme';
 import red from '@mui/material/colors/red';
 import IntroductionHeader from './components/IntroductionHeader';
-import { Divider, List, ListItem, responsiveFontSizes } from '@mui/material';
+import { Divider, LinearProgress, List, ListItem, responsiveFontSizes } from '@mui/material';
 import ImageGalleryFooter from './components/ImageGalleryFooter';
 import ImageGalleryDynamic from './components/ImageGalleryDynamic';
 import TallImageGallery from './components/TallImageGallery';
@@ -85,6 +85,14 @@ function App() {
         fetchData()
     }, [])
 
+    function LoadingDivider() {
+        if (tall_photos && wide_photos) {
+            return  <Divider variant = "inset" component = "li" sx = {{ borderBottomWidth: 3, bgcolor: 'black' }}/>
+        }
+        
+        return <LinearProgress />
+    }
+
     return (
         <ThemeProvider theme = {theme}>
             <IntroductionHeader />
@@ -93,7 +101,7 @@ function App() {
                     <WideImageGallery itemData = { wide_photos }/>
                 </ListItem>
 
-                <Divider variant = "inset" component = "li" sx = {{ borderBottomWidth: 3, bgcolor: 'black' }}/>
+                <LoadingDivider />
 
                 <ListItem>
                     <TallImageGallery itemData = { tall_photos }/>
