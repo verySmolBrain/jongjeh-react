@@ -14,7 +14,8 @@
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.13.5",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-photo-album": "^2.2.2"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
