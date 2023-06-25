@@ -6,6 +6,7 @@ import IntroductionHeader from './components/IntroductionHeader';
 import { Divider, LinearProgress, List, ListItem, responsiveFontSizes } from '@mui/material';
 import ImageGalleryFooter from './components/ImageGalleryFooter';
 import theme from './theme/theme';
+import YoutubeEmbed from './components/YoutubeEmbed';
 
 type Photo = {
     src: string
@@ -32,6 +33,12 @@ function App() {
         <ThemeProvider theme = { theme }>
             <IntroductionHeader />
             <List>
+                <ListItem>
+                    <YoutubeEmbed embedId = "dQw4w9WgXcQ" />
+                </ListItem>
+
+                <Divider sx = {{ borderBottomWidth: 3, bgcolor: 'black' }}/>
+                
                 <ListItem>
                     <ImageGallery images = { generate_images(wide_images) } is_wide = { true }/>
                 </ListItem>
