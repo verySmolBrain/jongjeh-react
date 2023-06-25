@@ -7,6 +7,7 @@ import { Divider, LinearProgress, List, ListItem, responsiveFontSizes } from '@m
 import ImageGalleryFooter from './components/ImageGalleryFooter';
 import theme from './theme/theme';
 import YoutubeEmbed from './components/YoutubeEmbed';
+import AnimatedDivider from './components/AnimatedDivider';
 
 type Photo = {
     src: string
@@ -32,23 +33,16 @@ function App() {
     return (
         <ThemeProvider theme = { theme }>
             <IntroductionHeader />
-            <List>
-                <ListItem>
-                    <YoutubeEmbed embedId = "ZL0uGxBpuxw" />
-                </ListItem>
 
-                <Divider sx = {{ borderBottomWidth: 3, bgcolor: 'black' }}/>
+            <YoutubeEmbed embedId = "ZL0uGxBpuxw" />
+            <AnimatedDivider />
                 
-                <ListItem>
-                    <ImageGallery images = { generate_images(wide_images) } is_wide = { true }/>
-                </ListItem>
-            
-                <Divider sx = {{ borderBottomWidth: 3, bgcolor: 'black' }}/>
+            <ImageGallery images = { generate_images(wide_images) } is_wide = { true }/>
+            <AnimatedDivider />
 
-                <ListItem>
-                    <ImageGallery images = { generate_images(tall_images) } is_wide = { false }/>
-                </ListItem>
-            </List>
+            <ImageGallery images = { generate_images(tall_images) } is_wide = { false }/>
+            <AnimatedDivider />
+
             <ImageGalleryFooter />
         </ThemeProvider>
     )
