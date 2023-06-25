@@ -15,7 +15,12 @@ function ImageGallery( { images, is_wide }: ImageGalleryParams ) {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
-    const base_columns = is_wide ? 1 : 2;
+    let columns = 2;
+    if (is_wide) {
+        columns = 1;
+    } else {
+        columns = isMobile ? 2 : 3;
+    }
 
     const [open, setOpen] = useState(false);
     const [selectedImage, setSelectedImage] = useState('');
@@ -30,7 +35,7 @@ function ImageGallery( { images, is_wide }: ImageGalleryParams ) {
     };
 
     return (
-        <ImageList variant = "masonry" cols = {isMobile ? base_columns : base_columns + 1} gap = {8}>
+        <ImageList variant = "masonry" cols = {columns} gap = {8}>
             {
                 images.map((item: { src: string; title: string | undefined; }) => (
                     <ImageListItem key = {item.src}>
