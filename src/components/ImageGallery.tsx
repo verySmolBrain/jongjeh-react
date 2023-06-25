@@ -44,8 +44,17 @@ function ImageGallery( { images, is_wide }: ImageGalleryParams ) {
                     </ImageListItem>
                 ))
             }
-            <Dialog open = { open } onClose = { handleClose } onClick = { handleClose }>
-                <img src = {`${selectedImage}?w=800&fit=crop&auto=format`} alt = ""/>
+            <Dialog 
+                open = { open } 
+                onClose = { handleClose } 
+                onClick = { handleClose } 
+                PaperProps = {{
+                    style: {
+                        maxWidth: "100%",
+                    }
+                }}
+            >
+                <img src = {`${selectedImage}?w=400&fit=crop&auto=format`} alt = "" style = {{ maxWidth: "100%", maxHeight: "calc(100vh - 64px)" }}/>
             </Dialog>
         </ImageList>
     )
