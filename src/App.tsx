@@ -33,16 +33,23 @@ function App() {
     return (
         <ThemeProvider theme = { theme }>
             <IntroductionHeader />
+            <List>
+                <ListItem>
+                    <YoutubeEmbed embedId = "ZL0uGxBpuxw" />
+                </ListItem>
 
-            <YoutubeEmbed embedId = "ZL0uGxBpuxw" />
-            <AnimatedDivider />
+                <AnimatedDivider />
                 
-            <ImageGallery images = { generate_images(wide_images) } is_wide = { true }/>
-            <AnimatedDivider />
+                <ListItem>
+                    <ImageGallery images = { generate_images(wide_images) } is_wide = { true }/>
+                </ListItem>
+            
+                <AnimatedDivider />
 
-            <ImageGallery images = { generate_images(tall_images) } is_wide = { false }/>
-            <AnimatedDivider />
-
+                <ListItem>
+                    <ImageGallery images = { generate_images(tall_images) } is_wide = { false }/>
+                </ListItem>
+            </List>
             <ImageGalleryFooter />
         </ThemeProvider>
     )

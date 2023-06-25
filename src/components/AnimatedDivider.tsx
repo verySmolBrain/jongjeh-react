@@ -5,11 +5,11 @@ const YoutubeEmbed = () => (
     <Box
         display = "flex"
         justifyContent = "center"
-        width = "90vw"
-        maxHeight = "1vh"
+        maxWidth = "95%"
+        maxHeight = "3vh"
         mx = "auto"
     >
-        <img src = "/divider.gif"></img>
+        <img src = "/divider.gif" style = {{ maxWidth: "100%" }}></img>
     </Box>
 );
 
