@@ -1,1 +1,21 @@
 ---
+import { Image } from "astro:assets";
+const images = await Astro.glob("/src/assets/featured/major/*").then((files) => {
+  return files.map((file) => file.default);
+});
+---
+
+<div class="grid gap-4">
+    {
+      images.map((img) => (
+        <div class="flex items-center justify-center">
+          <Image
+            class="object-contain h-full rounded-lg image-modal"
+            src={img}
+            alt={img.src}
+            loading="eager"
+          />
+        </div>
+      ))
+    }
+</div>

@@ -4,8 +4,10 @@ import Icon from "astro-icon";
 import "@fontsource/indie-flower";
 import { Image } from "astro:assets";
 import Divider from "../assets/divider.webp";
-import Gallery from "../components/Gallery.astro";
+import Gallery from "../components/NormalGallery.astro";
 import Footer from "../components/Footer.astro";
+import CategoryGallery from "../components/CategoryGallery.astro";
+import HighlightGallery from "../components/HighlightGallery.astro";
 ---
 
 <Layout title="Jongjeh">
@@ -21,9 +23,14 @@ import Footer from "../components/Footer.astro";
         title="One Piece"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
+        loading="lazy"
         class="w-full aspect-video pl-2 pr-2"></iframe>
     </div>
 
+    <Image src={Divider} alt="divider" class="h-8" />
+    <HighlightGallery />
+    <Image src={Divider} alt="divider" class="h-8" />
+    <CategoryGallery />
     <Image src={Divider} alt="divider" class="h-8" />
     <Gallery />
     <Image src={Divider} alt="divider" class="h-8" />

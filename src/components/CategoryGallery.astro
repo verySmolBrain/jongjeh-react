@@ -1,0 +1,82 @@
+---
+import { Image } from "astro:assets";
+const images = await Astro.glob("/src/assets/featured/horsemen/*").then((files) => {
+  return files.map((file) => file.default);
+});
+
+const column_one: any[] = [];
+const column_two: any[] = [];
+const column_three: any[] = [];
+const column_four: any[] = [];
+
+images.forEach((obj, index) => {
+  if (index % 4 === 0) {
+    column_one.push(obj);
+  } else if (index % 4 === 1) {
+    column_two.push(obj);
+  } else if (index % 4 === 2) {
+    column_three.push(obj);
+  } else {
+    column_four.push(obj);
+  }
+});
+---
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+  <div class="grid gap-4">
+    {
+      column_one.map((img) => (
+        <div class="flex items-center justify-center">
+          <Image
+            class="object-contain h-full rounded-lg image-modal"
+            src={img}
+            alt={img.src}
+            loading="eager"
+          />
+        </div>
+      ))
+    }
+  </div>
+  <div class="grid gap-4">
+    {
+      column_two.map((img) => (
+        <div class="flex items-center justify-center">
+          <Image
+            class="object-contain h-full rounded-lg image-modal"
+            src={img}
+            alt={img.src}
+            loading="eager"
+          />
+        </div>
+      ))
+    }
+  </div>
+  <div class="grid gap-4">
+    {
+      column_three.map((img) => (
+        <div class="flex items-center justify-center">
+          <Image
+            class="object-contain h-full rounded-lg image-modal"
+            src={img}
+            alt={img.src}
+            loading="eager"
+          />
+        </div>
+      ))
+    }
+  </div>
+  <div class="grid gap-4">
+    {
+      column_four.map((img) => (
+        <div class="flex items-center justify-center">
+          <Image
+            class="object-contain h-full rounded-lg image-modal"
+            src={img}
+            alt={img.src}
+            loading="eager"
+          />
+        </div>
+      ))
+    }
+  </div>
+</div>
