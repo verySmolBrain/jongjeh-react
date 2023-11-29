@@ -1,8 +1,10 @@
 ---
 import { Image } from "astro:assets";
-const images = await Astro.glob("/src/assets/featured/horsemen/*").then((files) => {
-  return files.map((file) => file.default);
-});
+const images = await Astro.glob("/src/assets/featured/horsemen/*").then(
+  (files) => {
+    return files.map((file) => file.default);
+  }
+);
 
 const column_one: any[] = [];
 const column_two: any[] = [];
@@ -31,7 +33,7 @@ images.forEach((obj, index) => {
             class="object-contain h-full rounded-lg image-modal"
             src={img}
             alt={img.src}
-            loading="eager"
+            loading="lazy"
           />
         </div>
       ))
@@ -45,7 +47,7 @@ images.forEach((obj, index) => {
             class="object-contain h-full rounded-lg image-modal"
             src={img}
             alt={img.src}
-            loading="eager"
+            loading="lazy"
           />
         </div>
       ))
@@ -59,7 +61,7 @@ images.forEach((obj, index) => {
             class="object-contain h-full rounded-lg image-modal"
             src={img}
             alt={img.src}
-            loading="eager"
+            loading="lazy"
           />
         </div>
       ))
@@ -73,7 +75,7 @@ images.forEach((obj, index) => {
             class="object-contain h-full rounded-lg image-modal"
             src={img}
             alt={img.src}
-            loading="eager"
+            loading="lazy"
           />
         </div>
       ))
